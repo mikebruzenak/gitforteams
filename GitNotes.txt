@@ -91,6 +91,8 @@ git stash drop stash@{1}
 git stash pop
 git stash drop
 ==============
+tracking?
+==============
 
 git branch -a
 git branch -r
@@ -104,5 +106,6 @@ continuous vs scheduled dployment
 git branch -d deletethisbranch
 git checkout -b b1  #create branch and switch too
 
+git push --set-upstream origin b1
 
 
