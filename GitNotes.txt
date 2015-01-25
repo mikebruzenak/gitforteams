@@ -1,0 +1,108 @@
+ssh-keygen -t rsa -C "email"
+cat ~/.ssh/id_rsa.pub
+
+=====set up existing project in git =======
+create new repostiry and copy url
+git init
+git add .
+git co "initial commit"
+git remote add origin git@github.com:mikebruzenak/GitPlay.git
+git remote -v
+git push origin master
+ 
+
+ ==============
+ git log --oneline --graph
+gitk
+git config --local user.email ""
+git config --global core.editor mate -w
+git config --global core.editor sbl -w
+mate subl vim
+git config --global 
+
+git remote
+git remote -v
+git remote show origin
+
+========local clone=============
+git clone gitforteams lgitforteams
+cd lgitforteams/
+cd ../gitforteams
+git remote add local1 ~/Desktop/RailsCourse/GitVideoCourse/lgitforteams
+git remote -v
+git push local1
+
+git remote remove local
+
+------- problem with local push --------
+< !700 > $ git push local1
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: error: refusing to update checked out branch: refs/heads/master
+remote: error: By default, updating the current branch in a non-bare repository
+remote: error: is denied, because it will make the index and work tree inconsistent
+remote: error: with what you pushed, and will require 'git reset --hard' to match
+remote: error: the work tree to HEAD.
+remote: error: 
+remote: error: You can set 'receive.denyCurrentBranch' configuration variable to
+remote: error: 'ignore' or 'warn' in the remote repository to allow pushing into
+remote: error: its current branch; however, this is not recommended unless you
+remote: error: arranged to update its work tree to match what you pushed in some
+remote: error: other way.
+remote: error: 
+remote: error: To squelch this message and still keep the default behaviour, set
+remote: error: 'receive.denyCurrentBranch' configuration variable to 'refuse'.
+To /Users/michaelbruzenak/Desktop/RailsCourse/GitVideoCourse/lgitforteams
+ ! [remote rejected] master -> master (branch is currently checked out)
+error: failed to push some refs to '/Users/michaelbruzenak/Desktop/RailsCourse/GitVideoCourse/lgitforteams'
+[ 06:15 AM | michaelbruzenak@Michaels-MacBook-Pro-2 | Last Command: Failed | ~/Desktop/RailsCourse/GitVideoCourse/gitforteams (master) ]
+< !701 > $ git push origin
+Counting objects: 7, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/mikebruzenak/gitforteams.git
+   8ddecfa..fc0f108  master -> master
+
+http://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-master-master-branch-is-currently-checked
+git config --bool core.bare true
+
+better solution create a fake branch on the remote and check it out
+
+========
+up-to-date but changes not staged for commit
+git diff
+git add nameoffile
+   or
+git checkout  <to wipe files changed>
+
+====
+541  ls ~/Downloads
+git add .
+git status
+git stash
+git stash list
+git stash apply stash@{1}
+git stash drop stash@{1}
+git stash pop
+git stash drop
+==============
+
+git branch -a
+git branch -r
+git fetch  #update remotes to current
+git branch -a --verbose
+
+git checkout --track gitlab/1-bad_jokes
+
+continuous vs scheduled dployment
+
+git branch -d deletethisbranch
+git checkout -b b1  #create branch and switch too
+
+
+
