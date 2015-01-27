@@ -1,0 +1,4 @@
+mergec.txt
+a conflict 
+another bad one
+still another
