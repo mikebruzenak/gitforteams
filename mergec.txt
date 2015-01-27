@@ -1,0 +1,3 @@
+mergec.txt
+this is a conflict
+or two
