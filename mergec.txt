@@ -1,3 +1,4 @@
 mergec.txt
 this is a conflict
-or two
+another bad one
+still another
